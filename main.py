@@ -1,5 +1,6 @@
 from device import Device
 from noNoiseChannel import NoNoiseChannel
+from signalCompare import signalCompare
 from cableCuttedOffChannel import CableCuttedOffChannel
 
 def show_menu():
@@ -9,6 +10,7 @@ def show_menu():
     print("4. Send signal from A to B")
     print("5. No noise channel")
     print("6. Cut the cable!")
+    print("7. Compare signals")
     print("0. Quit")    
 
 device_A = Device()
@@ -34,6 +36,8 @@ while choice!=0:
         noise = NoNoiseChannel()
     elif choice == 6:
         noise = CableCuttedOffChannel()
+    elif choice==7:
+        signalCompare.signal_compare(device_A,device_B)
     elif choice == 0:
         print("Quitting")
     else:
