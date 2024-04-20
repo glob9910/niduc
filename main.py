@@ -26,9 +26,9 @@ while choice!=0:
     if choice == 1:
         device_A.create_random_signal()
     elif choice == 2:
-        print(device_A.signal)
+        print(device_A.data)
     elif choice == 3:
-        print(device_B.signal)
+        print(device_B.data)
     elif choice == 4:
         noise.receive_signal(device_A.send_signal())
         device_B.receive_signal(noise.send_signal())
